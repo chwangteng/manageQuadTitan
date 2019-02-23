@@ -5,7 +5,7 @@
 
 | 条目 | 详情 | 备注 |
 | ------ | ------ | ------ |
-| 启动项切换 | 开机按F8 | 默认Ubuntu，选择Windows Boot Manager启动Winsdows系统 |
+| 启动项切换 | 开机按F8 | 默认Ubuntu，选择Windows Boot Manager启动Windows系统 |
 | 处理器 | E5 2678 V3 x2 |  |
 | 主板 | Z10PE-D8 |  |
 | 内存 | DDR4 ERCC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
@@ -48,11 +48,22 @@ Password：姓名全拼（小写）
 # Windows系统
 
 ## 环境
-Nvidia Driver：未知  
+Nvidia Driver：未核实  
 CUDA：无  
 cuDNN：无  
 IP：10.21.6.96  
 
+## 账户
+用户名：root1root
+密码：无
+
 ## Teamviewer（不推荐）
 ID：1202299635  
 PW：qweasdzxc
+
+# 注意事项
+在python中，务必使用如下代码来指定抢占的GPU，x为0或1或2或3
+```python
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
+```
