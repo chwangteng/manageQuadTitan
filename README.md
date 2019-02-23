@@ -16,7 +16,7 @@ PW：qweasdzxc
 ID：未知  
 PW：未知
 
-# 环境
+# Ubuntu 环境
 Nvidia Driver：384.130  
 CUDA：9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
