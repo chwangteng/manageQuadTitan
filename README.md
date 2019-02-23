@@ -1,7 +1,7 @@
 # manageQuadTitan
 四卡泰坦电脑的说明文档
 
-# 软硬件概况
+# 硬件概况
 
 | 条目 | 详情 | 备注 |
 | ------ | ------ | ------ |
@@ -9,14 +9,13 @@
 | 处理器 | E5 2678 V3 x2 |  |
 | 主板 | Z10PE-D8 |  |
 | 内存 | DDR4 ERCC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
-| 硬盘 | 三星860 EVO 250GB SATA固态 + 西数 2TB 5400转 蓝盘 | 固态安装有Windwos，机械安装有Ubuntu |
+| 硬盘 | 三星860 EVO 250GB SATA 固态 + 西数 2TB 5400转 蓝盘 | 固态安装有Windwos，机械安装有Ubuntu |
 | 显卡 | Titan Xp 12GB x4 |  |
 
 # Ubuntu系统
-IP地址：10.21.6.96  
-| ------ | ------ | ------ |
-| 硬盘 | 三星860 EVO 250GB SATA固态 + 西数 2TB 5400转 蓝盘 | 固态安装有Windwos，机械安装有Ubuntu |
-| 显卡 | Titan Xp 12GB x4 |  |
+
+## IP地址
+10.21.6.96  
 
 # root 账户（不推荐）
 Username：root1root  
