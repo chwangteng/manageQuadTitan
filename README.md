@@ -5,7 +5,7 @@
 
 | 条目 | 详情 | 备注 |
 | ------ | ------ | ------ |
-| 启动项切换 | F8 | 默认Ubuntu，选择Windows Boot Manager启动Winsdows系统 |
+| 启动项切换 | 开机按F8 | 默认Ubuntu，选择Windows Boot Manager启动Winsdows系统 |
 | 处理器 | E5 2678 V3 x2 |  |
 | 主板 | Z10PE-D8 |  |
 | 内存 | DDR4 ERCC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
@@ -14,6 +14,7 @@
 
 # Ubuntu系统
 IP地址：10.21.6.96  
+| ------ | ------ | ------ |
 | 硬盘 | 三星860 EVO 250GB SATA固态 + 西数 2TB 5400转 蓝盘 | 固态安装有Windwos，机械安装有Ubuntu |
 | 显卡 | Titan Xp 12GB x4 |  |
 
