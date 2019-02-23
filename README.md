@@ -67,3 +67,8 @@ PW：qweasdzxc
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
 ```
+使用System Monitor来查看CPU和内存等占用情况  
+可以使用如下代码来查看GPU的占用情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分
+```linux
+watch -n 1 -d nvidia-smi
+```
