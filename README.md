@@ -62,12 +62,12 @@ ID：1202299635
 PW：qweasdzxc
 
 # 注意事项
-在python中，务必使用如下代码来指定抢占的GPU，x为0或1或2或3
+1. 在python中，务必使用如下代码来指定抢占的GPU，x为0或1或2或3
 ```python
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
 ```
-使用System Monitor来查看CPU和内存等占用情况  
+- 使用System Monitor来查看CPU和内存等占用情况  
 可以使用如下代码来查看GPU的占用情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分
 ```linux
 watch -n 1 -d nvidia-smi
