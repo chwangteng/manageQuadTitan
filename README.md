@@ -46,6 +46,13 @@ Password：姓名全拼（小写）
 | 罗利鹏 | llp | luolipeng | student | /home/llp |
 
 # Windows系统
+
+## 环境
+Nvidia Driver：未知 
+CUDA：无  
+cuDNN：无  
+IP：10.21.6.96  
+
 ## Teamviewer（不推荐）
 ID：1202299635  
 PW：qweasdzxc
