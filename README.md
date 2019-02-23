@@ -28,12 +28,12 @@ Password：姓名全拼（小写）
 
 | 姓名 | 用户名 | 密码 | 组 |
 | ------ | ------ | ------ | ------ |
-| 华璟 | hj | huajing | 默认 |
-| 王慧燕 | why | wanghuiyan | 默认 |
-| 徐扬 | xy | xuyang | 默认 |
-| 雷蕾 | ll | leilei | 默认 |
-| 王腾 | wt | wangteng | 默认 |
-| 陶家威 | tjw | taojiawei | 默认 |
-| 陈海英 | chy | chenhaiying | 默认 |
-| 高明琦 | gmq | gaomingqi | 默认 |
-| 罗利鹏 | llp | luolipeng | 默认 |
+| 华璟 | hj | huajing | teacher |
+| 王慧燕 | why | wanghuiyan | teacher |
+| 徐扬 | xy | xuyang | student |
+| 雷蕾 | ll | leilei | student |
+| 王腾 | wt | wangteng | student |
+| 陶家威 | tjw | taojiawei | student |
+| 陈海英 | chy | chenhaiying | student |
+| 高明琦 | gmq | gaomingqi | student |
+| 罗利鹏 | llp | luolipeng | student |
