@@ -17,6 +17,6 @@ ID：未知
 PW：未知
 
 # 环境
-英伟达驱动：384.130  
+Nvidia Driver：384.130  
 CUDA：9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
