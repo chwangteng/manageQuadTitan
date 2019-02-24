@@ -40,6 +40,7 @@ Password：姓名全拼（小写）
 | 王慧燕 | why | wanghuiyan | teacher | /home/why |
 | 徐扬 | xy | xuyang | student | /home/xy |
 | 雷蕾 | ll | leilei | student | /home/ll |
+| 潘峥昊 | pzh | panzhenghao | student | /home/pzh |
 | 王腾 | wt | wangteng | student | /home/wt |
 | 陶家威 | tjw | taojiawei | student | /home/tjw |
 | 陈海英 | chy | chenhaiying | student | /home/chy |
