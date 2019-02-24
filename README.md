@@ -12,7 +12,7 @@
 | 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD | 固态安装有Windwos，机械安装有Ubuntu |
 | 显卡 | Nvidia Titan Xp 12GB x4 |  |
 
-## Ubuntu系统（固态硬盘）
+## Ubuntu系统（机械硬盘）
 
 ### 环境
 Ubuntu：16.04.4  
@@ -47,7 +47,7 @@ Password：姓名全拼（小写）
 | 高明琦 | gmq | gaomingqi | student | /home/gmq |
 | 罗利鹏 | llp | luolipeng | student | /home/llp |
 
-## Windows系统（机械硬盘）
+## Windows系统（固态硬盘）
 
 ### 环境
 Windows：Windows10 1809  
