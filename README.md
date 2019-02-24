@@ -15,7 +15,7 @@
 ## Ubuntu系统（固态）
 
 ### 环境
-Ubuntu：16.04.4
+Ubuntu：16.04.4  
 Nvidia Driver：384.130  
 CUDA：9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
@@ -49,7 +49,7 @@ Password：姓名全拼（小写）
 ## Windows系统（机械）
 
 ### 环境
-Windows：Windows10 1809
+Windows：Windows10 1809  
 Nvidia Driver：未核实  
 CUDA：无  
 cuDNN：无  
