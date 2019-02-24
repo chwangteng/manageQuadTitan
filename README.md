@@ -56,7 +56,7 @@ cuDNN：无
 IP：10.21.6.96  
 
 ### 账户
-用户名：root1root
+用户名：root1root  
 密码：无
 
 ### Teamviewer（不推荐）
