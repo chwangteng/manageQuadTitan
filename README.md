@@ -75,5 +75,6 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 watch -n 1 -d nvidia-smi
 ```
 3.Teamviewer已被某用户由14降级到13。对服务器配置进行变更时请及时提交Pull Request或通知本人更改。  
+  
 4.如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)  
-  关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 `Jetbrain 学生` 或 `Github 学生`  
+  关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生** 
