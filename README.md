@@ -34,18 +34,18 @@ Username：姓名首字母缩写（小写）
 Password：姓名全拼（小写）  
 请尽快修改密码  
 
-| 姓名 | 用户名 | 密码 | 组 | 初始路径 |
-| ------ | ------ | ------ | ------ | ------ |
-| 华璟 | hj | huajing | teacher | /home/hj | 
-| 王慧燕 | why | wanghuiyan | teacher | /home/why |
-| 徐扬 | xy | xuyang | student | /home/xy |
-| 雷蕾 | ll | leilei | student | /home/ll |
-| 潘峥昊 | pzh | panzhenghao | student | /home/pzh |
-| 王腾 | wt | wangteng | student | /home/wt |
-| 陶家威 | tjw | taojiawei | student | /home/tjw |
-| 陈海英 | chy | chenhaiying | student | /home/chy |
-| 高明琦 | gmq | gaomingqi | student | /home/gmq |
-| 罗利鹏 | llp | luolipeng | student | /home/llp |
+| 姓名 | 用户名 | 密码 | 组 | 初始路径 | sudo权限  |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| 华璟 | hj | huajing | teacher | /home/hj | 是 |
+| 王慧燕 | why | wanghuiyan | teacher | /home/why | 是 |
+| 徐扬 | xy | xuyang | student | /home/xy | 是 |
+| 雷蕾 | ll | leilei | student | /home/ll | 是 |
+| 潘峥昊 | pzh | panzhenghao | student | /home/pzh | 是 |
+| 王腾 | wt | wangteng | student | /home/wt | 是 |
+| 陶家威 | tjw | taojiawei | student | /home/tjw | 是 |
+| 陈海英 | chy | chenhaiying | student | /home/chy | 是 |
+| 高明琦 | gmq | gaomingqi | student | /home/gmq | 是 |
+| 罗利鹏 | llp | luolipeng | student | /home/llp | 是 |
 
 ## Windows系统（固态硬盘）
 
@@ -74,3 +74,4 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 ```linux
 watch -n 1 -d nvidia-smi
 ```
+3.Teamviewer已被某用户由14降级到13。对服务器配置进行变更时请及时提交Pull Request或通知本人更改。
