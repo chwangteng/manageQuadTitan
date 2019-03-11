@@ -78,7 +78,10 @@ watch -n 1 -d nvidia-smi
   
 4.如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）  
   关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   
+    
 5.可以使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。  
   创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。  
   关于conda、pip命令的更多使用方法，请参考其他教程。  
+    
 6.由于服务器没有安装FTP服务，所以无法直接在Windows资源管理器中直接添加网络位置，需要借助第三方软件。欲在Windows资源管理器中访问该服务器的网络位置并进行直观的操作，在搜索引擎中搜索**Swish - Easy SFTP for Windows**了解一下（基于SSH的子协议SFTP）；或者使用**WinSCP**来进行图形化的文件管理。  
+  
