@@ -87,3 +87,6 @@ watch -n 1 -d nvidia-smi
   欲在Windows资源管理器中访问该服务器的网络位置并进行直观的操作，在搜索引擎中搜索**Swish - Easy SFTP for Windows**了解一下（基于SSH的子协议SFTP）；或者使用**WinSCP**来进行图形化的文件管理。  
   下图为Swish的集成效果。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/swish.png)
+  
+  下图为WinSCP的使用效果  
+  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/winscp.png)  
