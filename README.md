@@ -79,7 +79,7 @@ watch -n 1 -d nvidia-smi
 4.如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）  
   关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   
     
-5.使用`conda`或 `pip`命令来创建你的环境。  
+5.使用`conda`或 `pip`命令来创建和管理**你的环境**。  
   **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。  
   创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。  
   关于conda、pip命令的更多使用方法，请参考其他教程。  
@@ -91,3 +91,5 @@ watch -n 1 -d nvidia-smi
   
   下图为WinSCP的使用效果  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/winscp.png)  
+    
+7.由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。
