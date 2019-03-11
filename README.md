@@ -83,5 +83,6 @@ watch -n 1 -d nvidia-smi
   创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。  
   关于conda、pip命令的更多使用方法，请参考其他教程。  
     
-6.由于服务器没有安装FTP服务，所以无法直接在Windows资源管理器中直接添加网络位置，需要借助第三方软件。欲在Windows资源管理器中访问该服务器的网络位置并进行直观的操作，在搜索引擎中搜索**Swish - Easy SFTP for Windows**了解一下（基于SSH的子协议SFTP）；或者使用**WinSCP**来进行图形化的文件管理。  
+6.由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
+  欲在Windows资源管理器中访问该服务器的网络位置并进行直观的操作，在搜索引擎中搜索**Swish - Easy SFTP for Windows**了解一下（基于SSH的子协议SFTP）；或者使用**WinSCP**来进行图形化的文件管理。  
   
