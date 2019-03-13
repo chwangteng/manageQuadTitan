@@ -65,14 +65,14 @@ ID：1202299635
 PW：qweasdzxc
 
 ## 注
-1.由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
+1. 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
   
-2.使用`conda`或 `pip`命令来创建和管理**你的环境**。  
+2. 使用`conda`或 `pip`命令来创建和管理**你的环境**。  
   **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。  
   创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。  
   关于conda、pip命令的更多使用方法，请参考其他教程。 
     
-3. 在python中，务必使用如下代码来指定抢占的GPU，x为0或1或2或3，并尽可能不占用多块显卡。    
+3.  在python中，务必使用如下代码来指定抢占的GPU，x为0或1或2或3，并尽可能不占用多块显卡。    
 ```python
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
@@ -82,12 +82,12 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 watch -n 1 -d nvidia-smi
 ```
   
-5.如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）  
+5. 如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）  
   关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   
     
-6.Teamviewer已被某用户由14降级到13。对服务器配置进行变更时请及时提交Pull Request或通知本人更改。  
+6. Teamviewer已被某用户由14降级到13。对服务器配置进行变更时请及时提交Pull Request或通知本人更改。  
     
-7.Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
+7. Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
   欲在Windows资源管理器中“挂载”该网络位置，在搜索引擎中搜索**Swish - Easy SFTP for Windows**了解一下（基于SSH的子协议SFTP）；或使用**WinSCP**来进行图形化的文件管理。  
   下图为Swish的集成效果。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/swish.png)
