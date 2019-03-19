@@ -65,7 +65,10 @@ ID：1202299635
 PW：qweasdzxc
 
 ## 注
-1. 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
+0. 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
+
+1. 如果有必要，使用`nphup command &`命令保证进程不间断运行（如断开SSH连接等），对于不会主动关闭的进程，训练到一定程度后使用`kill`。  
+  更多用法参考[其他教程](https://blog.csdn.net/fang_chuan/article/details/82017470)
   
 2. 使用`conda`或 `pip`命令来创建和管理**你的环境**。  
   **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。  
@@ -77,7 +80,7 @@ PW：qweasdzxc
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
 ```  
-在Terminal中，在命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU  
+   在Terminal中，在命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU  
   
   
 4. 在Ubuntu系统中，可以使用如下代码来查看GPU的占用情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分
