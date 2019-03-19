@@ -76,7 +76,10 @@ PW：qweasdzxc
 ```python
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
-```
+```  
+在Terminal中，在命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU  
+  
+  
 4. 在Ubuntu系统中，可以使用如下代码来查看GPU的占用情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分
 ```linux
 watch -n 1 -d nvidia-smi
