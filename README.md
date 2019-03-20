@@ -91,9 +91,8 @@ watch -n 1 -d nvidia-smi
 5. 如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）  
   关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   
     
-6. Teamviewer已被某用户由14降级到13。对服务器配置进行变更时请及时提交Pull Request或通知本人更改。  
     
-7. Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
+6. Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
   欲在Windows资源管理器中“挂载”该网络位置，在搜索引擎中搜索**SFTP Net Drive（推荐，并在Internet选项中将本服务器IP地址加入本地Intranet来消除安全提示）**或**Swish - Easy SFTP for Windows**了解一下，都基于SSH的子协议SFTP；或使用**WinSCP**来进行图形化的文件管理。  
   下图为Swish的集成效果。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/swish.png)
@@ -101,4 +100,4 @@ watch -n 1 -d nvidia-smi
   下图为WinSCP的使用效果  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/winscp.png)  
     
-8.如果提示`libcublas.so.9.0: cannot open shared object file: No such file`的话，试一下在自己目录下的`./bashrc` 中末尾添加 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/` 然后执行 `source  ~/.bashrc` 一般可以解决。下次运行还会报错，只要执行那条source命令即可，我也不知道为啥。。。。求高人指点
+7.如果提示`libcublas.so.9.0: cannot open shared object file: No such file`的话，试一下在自己目录下的`./bashrc` 中末尾添加 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/` 然后执行 `source  ~/.bashrc` 一般可以解决。下次运行还会报错，只要执行那条source命令即可，我也不知道为啥。。。。求高人指点
