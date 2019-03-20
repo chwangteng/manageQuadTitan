@@ -27,7 +27,7 @@ Password：112233
 
 ### Teamviewer（不推荐）
 ID：1199518541  
-PW：qweasdzxc
+PW：332211
 
 ### 个人的账户和密码（推荐通过SSH登录）
 Username：姓名首字母缩写（小写）  
