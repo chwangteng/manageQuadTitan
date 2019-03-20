@@ -25,9 +25,6 @@ IP：10.21.6.96
 Username：root1root  
 Password：112233
 
-### Teamviewer（不推荐）
-ID：1199518541  
-PW：332211
 
 ### 个人的账户和密码（推荐通过SSH登录）
 Username：姓名首字母缩写（小写）  
@@ -60,9 +57,6 @@ IP：10.21.6.96
 用户名：root1root  
 密码：无
 
-### Teamviewer（不推荐）
-ID：1202299635  
-PW：qweasdzxc
 
 ## 注
 0. 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
