@@ -83,6 +83,7 @@ watch -n 1 -d nvidia-smi
 ```
   
 5. 如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）  
+  并可以在Pycharm Professional的Remote Host中进行图形化文件管理。  
   关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   
     
     
