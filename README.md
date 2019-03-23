@@ -74,6 +74,7 @@ IP：10.21.6.96
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
 ```  
+  
   在Terminal中，在命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU  
   
   
