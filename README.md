@@ -66,19 +66,19 @@ IP：10.21.6.96
   
 2. 使用`conda`或 `pip`命令来创建和管理**你的环境**。  
   **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。  
-  创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。  
+  创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。  
   关于conda、pip命令的更多使用方法，请参考其他教程。 
     
-3.  在python中，务必使用如下代码来指定抢占的GPU，x为0或1或2或3，并尽可能不占用多块显卡。    
+3.  在python中，务必在程序中加入如下代码来指定抢占的GPU，x为0或1或2或3，并尽可能不占用多块显卡。    
 ```python
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
 ```  
   
-  在Terminal中，在命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU  
+  也可以在Terminal中直接在命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU  
   
   
-4. 在Ubuntu系统中，可以使用如下代码来查看GPU的占用情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分
+4. 在Ubuntu系统中，可以使用如下代码来查看GPU的占用情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分，建议运行代码前查看空闲的GPU
 ```linux
 watch -n 1 -d nvidia-smi
 ```
