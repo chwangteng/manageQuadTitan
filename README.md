@@ -88,7 +88,7 @@ watch -n 1 -d nvidia-smi
     
 6. Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
   欲在Windows资源管理器中“挂载”该网络位置，在搜索引擎中搜索**SFTP Net Drive（推荐，并在Internet选项中将本服务器IP地址加入本地Intranet来消除安全提示）**或**Swish - Easy SFTP for Windows**了解一下，都基于SSH的子协议SFTP；或使用**WinSCP**来进行图形化的文件管理。  
-  下图为Swish的集成效果。  
+  下图为Swish的集成效果，可以支持更多本地化操作。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/SFTP%20Net%20Drive.png)
   
   下图为Swish的集成效果。  
