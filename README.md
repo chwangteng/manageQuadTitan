@@ -67,7 +67,7 @@ IP：10.21.6.96
 2. 使用`conda`或 `pip`命令来创建和管理**你的环境**。  
   **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn，不知道时候会有影响。（注：本机当前安装的驱动程序不支持cuda9.2及以上）关于conda、pip命令的更多使用方法，请参考其他教程。 
     
-3.  在python中，务必在程序中加入如下代码来指定抢占的GPU，x为0或1或2或3，并尽可能不占用多块显卡。    
+3.  在python中，务必在程序中加入如下代码来指定抢占的GPU，x为0或1或2或3或'0,1'等，尽量不占用大量显卡。    
 ```python
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
@@ -83,8 +83,7 @@ watch -n 1 -d nvidia-smi
   
 5. 如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）  
   并可以在Pycharm Professional的Remote Host中进行图形化文件管理。  
-  关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   
-    
+  关于怎样免费获取Pycharm Professional Edition，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   ，github学生认证更方便，通过后学生包中直接授权到Jetbrain的学生认证。  
     
 6. Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
   欲在Windows资源管理器中“挂载”该网络位置，在搜索引擎中搜索**SFTP Net Drive（推荐，并在Internet选项中将本服务器IP地址加入本地Intranet来消除安全提示）**或**Swish - Easy SFTP for Windows**了解一下，都基于SSH的子协议SFTP；或使用**WinSCP**来进行图形化的文件管理。  
