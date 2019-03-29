@@ -67,7 +67,7 @@ IP：10.21.6.96
 2. 使用`conda`或 `pip`命令来创建和管理**你的环境**。  
   **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn，不知道时候会有影响。（注：本机当前安装的驱动程序不支持cuda9.2及以上）关于conda、pip命令的更多使用方法，请参考其他教程。 
     
-3.  在python中，务必在程序中加入如下代码来指定抢占的GPU，x为0或1或2或3或'0,1'等，尽量不占用大量显卡。    
+3.  在python中，务必在程序中加入如下代码来指定抢占的GPU，x为0或1或2或3或0,1或0,2等（一共四块，为0123），尽量不占用大量显卡。    
 ```python
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
