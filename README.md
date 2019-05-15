@@ -103,6 +103,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
 export PATH=$PATH:/usr/local/cuda-9.0/bin
 export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
 ```
+
+8.Windows下PUTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程序popup的图片视频等。  
 ## 打印机
 0.型号cannon imageCLASS lbp6230dw  
 1.打印机设置为无线连接至402 professor wang, IP地址为10.21.6.97，在浏览器中访问该地址进行打印机管理，PIN密码为房间号。  
