@@ -113,3 +113,7 @@ export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
 3.打印机可以接受打印的IP地址限制为10.21.241.0-10.21.241.255（实验室）、10.21.6.66(单卡泰坦)、10.21.6.96（四卡泰坦）、10.21.240.96（隔壁实验室MIT无线路由器），如有需要，可以继续添加。  
 4.办公室的两台电脑都已经可以正常打印。  
 5.选择适合自己系统的版本下载驱动 [驱动网址](http://search-cn.canon-asia.com/canon__cn_zh__cn_zh/search.x?q=&ie=utf8&cat=0&ct=Support&pagemax=10&imgsize=1&pdf=ok&zoom=1&hf=category%09zubaken&cf=model_sm%3ALBP6230dw&modelName=LBP6230dw&ref=www.canon.com.cn&pid=Qwll_b5_PDEAbsajmlhBYg..&qid=X_aIwV7rUBVf7h04NiOK-9ugVEtFCiFs&d=DOWNLOADS%09Linux+64bit)
+
+## 附加链接
+[Linux分区：超过2TB硬盘分区](https://www.cnblogs.com/mannyzhoug/archive/2013/08/27/3284572.html)
+[Linux服务器新建用户和组，并分配sudo权限](https://www.cnblogs.com/devilmaycry812839668/p/10432877.html)
