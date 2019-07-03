@@ -21,7 +21,7 @@ CUDA：9.0
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
 IP：10.21.6.96  
 
-### root 账户（不推荐）
+### root1root 账户（不推荐）
 Username：root1root  
 Password：112233
 
