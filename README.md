@@ -1,5 +1,8 @@
 # manageQuadTitan
 四卡泰坦电脑1的说明文档
+## 警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告警告
+1. 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
+2. 请搞清楚每条命令的作用后再运行, 切忌跟着随意搜索到的教程盲操。  
 
 ## 硬件概况
 
@@ -24,7 +27,6 @@ IP：10.21.6.96
 ### 公共账户（不推荐）
 Username：root1root  
 Password：112233
-
 
 ### 个人的账户和密码（通过SSH登录）
 Username：姓名首字母缩写（小写）  
@@ -56,13 +58,10 @@ IP：10.21.6.96
 ### 账户
 用户名：root1root  
 密码：无
-
-
-## 警告
-由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
+  
 ## 连接
 ### 使用SSH连接工具
-这里我使用PUTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh wt@10.21.6.96 -pw wangteng`，也可以通过创建密钥等其他方式进行自动登录。  
+这里我使用PuTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh wt@10.21.6.96 -pw wangteng`，也可以通过创建密钥等其他方式进行自动登录。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/PUTTY_autologin.png)  
 ### 在Windows任务管理器中管理远程文件
 Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
@@ -74,7 +73,7 @@ Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Wind
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/sftp_case.png) 
 - 值得注意的是，每个目录下用缩略图方式查看文件后会生成thumb.db，如果你的代码是**无脑读取目录下所有文件**的话，要记得手动删了这个东西哦。
 ### 在Windows中显示远程窗口
-Windows下PUTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程显示的图片视频等。 
+Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程显示的图片视频等。 
 ## 运行计算
 ### 使用conda创建和管理环境
 - 使用`conda`或 `pip`命令来创建和管理**你的环境**。使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径可通过`conda env list`命令查看。  
