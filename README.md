@@ -93,11 +93,16 @@ export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
 ```
 ### 使用Clion在远程环境中运行
 Clion远程配置[官方教程](https://www.jetbrains.com/help/clion/remote-projects-support.html)  
+### 使用SSH连接工具
+这里我使用PUTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh wt@10.21.6.96 -pw wangteng`，也可以通过创建密钥等其他方式进行自动登录。  
+
 ### 在Windows任务管理器中管理远程文件
 Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
 **SFTP Net Drive** 或 Swish - Easy SFTP for Windows 或者 WinSCP，都基于SSH 的子协议SFTP。    
-  下图为**SFTP Net Drive**的集成效果，可以支持更多本地化操作。  
-  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/SFTP%20Net%20Drive.png)
+  下图为**SFTP Net Drive**的集成效果，可以支持很多本地化操作。剪切大文件不需要网络传输，可瞬间完成。但是解压文件会先传输到本机，再传回服务器，所以应该直接用命令在服务器端解压和压缩。由于基础设施限制，理论传输网速为100Mb/s, 即12.5MB/s, 传输大文件的极限速度如上；若是大量零散的小文件（如解压后的图片数据集），整体速度会巨慢。  
+  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/SFTP%20Net%20Drive.png)  
+  下图为Advanced中的配置，字符集设置为UTF-8后可解决乱码问题，由于是linux系统，大小写敏感也需要勾选。连接后挂载的目录可以选择根目录，否则将无法返回根目录层级。
+- 值得注意的是，每个目录下用缩略图方式查看文件后会生成thumb.db，如果你的代码是**无脑读取目录下所有文件**的话，要记得手动删了这个东西哦。
 ### 在Windows中显示远程窗口
 Windows下PUTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程显示的图片视频等。  
 ## 打印机配置
