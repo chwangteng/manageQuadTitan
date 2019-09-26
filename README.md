@@ -58,9 +58,28 @@ IP：10.21.6.96
 密码：无
 
 
-## 其他提醒
-### 警告
+## 警告
 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
+## 连接
+### 使用SSH连接工具
+这里我使用PUTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh wt@10.21.6.96 -pw wangteng`，也可以通过创建密钥等其他方式进行自动登录。  
+  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/PUTTY_autologin.png)  
+### 在Windows任务管理器中管理远程文件
+Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
+**SFTP Net Drive** 或 Swish - Easy SFTP for Windows 或者 WinSCP，都基于SSH 的子协议SFTP。    
+  下图为**SFTP Net Drive**的集成效果，可以支持很多本地化操作。剪切大文件不需要网络传输，可瞬间完成。但是解压文件会先传输到本机，再传回服务器，所以应该直接用命令在服务器端解压和压缩。由于基础设施限制，理论传输网速为100Mb/s, 即12.5MB/s, 传输大文件的极限速度如上；若是大量零散的小文件（如解压后的图片数据集），整体速度会巨慢。  
+  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/SFTP%20Net%20Drive.png)  
+  下图为Advanced中的配置，字符集设置为UTF-8后可解决乱码问题，由于是linux系统，大小写敏感也需要勾选。连接后挂载的目录可以选择根目录，否则将无法返回根目录层级。 
+  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/sftp_charset.png)  
+  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/sftp_case.png) 
+- 值得注意的是，每个目录下用缩略图方式查看文件后会生成thumb.db，如果你的代码是**无脑读取目录下所有文件**的话，要记得手动删了这个东西哦。
+### 在Windows中显示远程窗口
+Windows下PUTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程显示的图片视频等。 
+## 运行计算
+### 使用conda创建和管理环境
+- 使用`conda`或 `pip`命令来创建和管理**你的环境**。使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径可通过`conda env list`命令查看。  
+- 使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn。关于conda、pip命令的更多使用方法，请参考其他教程。  
+- **注意：本机当前安装的驱动程序及系统版本限制，不支持cuda9.2及以上版本。**   
 ### 指定计算使用哪块GPU！指定计算使用哪块GPU！指定计算使用哪块GPU！   
 - 运行程序前，务必使用如下命令来查看GPU的空闲情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分。  
 ```linux
@@ -76,10 +95,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 - 使用形如`nohup python -u trian.py &`命令保证进程不间断运行（如断开SSH连接等），`-u`可加可不加，它能保证python程序的输出可以无缓存、及时地更新到nohup.out文件中，对于不会主动停止的进程，训练后使用`kill`。  
 - 使用`nohup python -u trian.py > customfileout.txt 2>&1 &`形如这样的命令来指定输出文件名，2、1是标准输出流和错误流。  
 更多用法参考[其他教程](https://blog.csdn.net/fang_chuan/article/details/82017470)  
-### 使用conda创建和管理环境
-- 使用`conda`或 `pip`命令来创建和管理**你的环境**。使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径可通过`conda env list`命令查看。  
-- 使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn。关于conda、pip命令的更多使用方法，请参考其他教程。  
-- **注意：本机当前安装的驱动程序及系统版本限制，不支持cuda9.2及以上版本。** 
+
 ### 使用Pycharm在远程环境中运行
 - 如果使用Pycharm Professional进行远程开发、调试，可以参考[这篇文章](https://blog.csdn.net/yejingtao703/article/details/80292486)（配置时使用自己的Username和环境）并可以在Pycharm Professional的Remote Host中进行图形化文件管理。  
 关于怎样免费使用Pycharm Professional，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   ，github学生认证更方便，通过后学生包中直接授权到Jetbrain的学生认证。   
@@ -93,18 +109,7 @@ export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
 ```
 ### 使用Clion在远程环境中运行
 Clion远程配置[官方教程](https://www.jetbrains.com/help/clion/remote-projects-support.html)  
-### 使用SSH连接工具
-这里我使用PUTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh wt@10.21.6.96 -pw wangteng`，也可以通过创建密钥等其他方式进行自动登录。  
-
-### 在Windows任务管理器中管理远程文件
-Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
-**SFTP Net Drive** 或 Swish - Easy SFTP for Windows 或者 WinSCP，都基于SSH 的子协议SFTP。    
-  下图为**SFTP Net Drive**的集成效果，可以支持很多本地化操作。剪切大文件不需要网络传输，可瞬间完成。但是解压文件会先传输到本机，再传回服务器，所以应该直接用命令在服务器端解压和压缩。由于基础设施限制，理论传输网速为100Mb/s, 即12.5MB/s, 传输大文件的极限速度如上；若是大量零散的小文件（如解压后的图片数据集），整体速度会巨慢。  
-  ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/SFTP%20Net%20Drive.png)  
-  下图为Advanced中的配置，字符集设置为UTF-8后可解决乱码问题，由于是linux系统，大小写敏感也需要勾选。连接后挂载的目录可以选择根目录，否则将无法返回根目录层级。
-- 值得注意的是，每个目录下用缩略图方式查看文件后会生成thumb.db，如果你的代码是**无脑读取目录下所有文件**的话，要记得手动删了这个东西哦。
-### 在Windows中显示远程窗口
-Windows下PUTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程显示的图片视频等。  
+ 
 ## 打印机配置
 - **型号**：cannon imageCLASS lbp6230dw  
 - **后台**：打印机设置为无线连接至402 professor wang, IP地址为10.21.6.97，在浏览器中访问该地址进行打印机管理，PIN密码为房间号。    
