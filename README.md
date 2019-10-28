@@ -66,7 +66,7 @@ IP：10.21.6.96
 ### 在Windows任务管理器中管理远程文件
 Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
 **SFTP Net Drive** 或 Swish - Easy SFTP for Windows 或者 WinSCP，都基于SSH 的子协议SFTP。    
-  下图为**SFTP Net Drive**的集成效果，可以支持很多本地化操作。剪切大文件不需要网络传输，可瞬间完成。但是解压文件会先传输到本机，再传回服务器，所以应该直接用命令在服务器端解压和压缩。由于基础设施限制，理论传输网速为100Mb/s, 即12.5MB/s, 传输大文件的极限速度如上；若是大量零散的小文件（如解压后的图片数据集），整体速度会巨慢。  
+  下图为**SFTP Net Drive**的集成效果，可以支持很多本地化操作。剪切大文件不需要网络传输，可瞬间完成，其他操作例如解压文件会先传输到本机，再传回服务器，所以应该直接用命令在服务器端解压和压缩。由于基础设施限制，理论传输网速为100Mb/s, 即12.5MB/s, 传输大文件的极限速度如上；若是大量零散的小文件（如解压后的图片数据集），整体速度会巨慢。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/SFTP%20Net%20Drive.png)  
   下图为Advanced中的配置，字符集设置为UTF-8后可解决乱码问题，由于是linux系统，大小写敏感也需要勾选。连接后挂载的目录可以选择根目录，否则将无法返回根目录层级。 
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/sftp_charset.png)  
@@ -91,7 +91,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 ```  
 也可以直接在终端的python命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU。  
 ### 监控系统其他资源
-- 使用[iostat工具](https://blog.csdn.net/feeltouch/article/details/95042396)`watch -n 1 -d iostat -d -x -k 1 2`  `watch -n 1 -d iostat 1 2`查看磁盘和CPU状况，使用`htop`  `top`查看CPU及进程。  
+- 使用[iostat工具](https://blog.csdn.net/feeltouch/article/details/95042396)`watch -n 1 -d iostat -d -x -k 1 2`  `watch -n 1 -d iostat 1 2`查看磁盘和CPU状况，使用`htop`  `top`查看CPU及进程，使用 `iotop` 查看I/O状态，使用`bmon -p enp7s0`查看网络流量。
 ### 不间断运行python程序
 - 使用形如`nohup python -u trian.py &`命令保证进程不间断运行（如断开SSH连接等），`-u`可加可不加，它能保证python程序的输出可以无缓存、及时地更新到nohup.out文件中，对于不会主动停止的进程，训练后使用`kill`。  
 - 使用`nohup python -u trian.py > customfileout.txt 2>&1 &`形如这样的命令来指定输出文件名，2、1是标准输出流和错误流。  
