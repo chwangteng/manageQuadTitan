@@ -12,7 +12,7 @@
 | 处理器 | Intel E5 2678 V3 x2 |  |
 | 主板 | ASUS Z10PE-D8 |  |
 | 内存 | Samsung DDR4 ERCC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
-| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD | 固态安装有Windows，机械安装有Ubuntu |
+| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD | 机械安装有Ubuntu，固态是swap分区 |
 | 显卡 | Nvidia Titan Xp 12GB x4 |  |
 
 ## Ubuntu系统（机械硬盘）
@@ -45,19 +45,6 @@ Password：姓名全拼（小写）
 | 陈海英 | chy | chenhaiying | student | /home/chy | 是 |
 | 高明琦 | gmq | gaomingqi | student | /home/gmq | 是 |
 | 罗利鹏 | llp | luolipeng | student | /home/llp | 是 |
-
-## Windows系统（固态硬盘）
-
-### 环境
-Windows：Windows10 1809  
-Nvidia Driver：未核实  
-CUDA：无  
-cuDNN：无  
-IP：10.21.6.96  
-
-### 账户
-用户名：root1root  
-密码：无
   
 ## 连接
 ### 使用SSH连接工具
