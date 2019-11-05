@@ -65,7 +65,7 @@ Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.ne
 ### 使用conda创建和管理环境
 - 使用`conda`或 `pip`命令来创建和管理**你的环境**。使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径可通过`conda env list`命令查看。  
 - 使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn。关于conda、pip命令的更多使用方法，请参考其他教程。  
-- **注意：本机当前安装的驱动程序及系统版本限制，不支持cuda9.2及以上版本。**   
+- **注意：本机当前安装的驱动程序及系统版本限制，不支持cuda9.2及以上版本，例如Pytorch最高只支持到1.1.0，详见各框架官网。**   
 ### 指定计算使用哪块GPU！指定计算使用哪块GPU！指定计算使用哪块GPU！   
 - 运行程序前，务必使用如下命令来查看GPU的空闲情况, `-n`后指定刷新的时间间隔， `-d`高亮刷新部分。  
 ```linux
