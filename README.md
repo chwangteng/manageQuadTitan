@@ -35,16 +35,16 @@ Password：姓名全拼（小写）
 
 | 姓名 | 用户名 | 密码 | 组 | 初始路径 | sudo权限  |
 | ------ | ------ | ------ | ------ | ------ | ------ |
-| 华璟 | hj | huajing | teacher | /home/hj | 是 |
-| 王慧燕 | why | wanghuiyan | teacher | /home/why | 是 |
-| 徐扬 | xy | xuyang | student | /home/xy | 是 |
-| 雷蕾 | ll | leilei | student | /home/ll | 是 |
-| 潘峥昊 | pzh | panzhenghao | student | /home/pzh | 是 |
-| 王腾 | wt | wangteng | student | /home/wt | 是 |
-| 陶家威 | tjw | taojiawei | student | /home/tjw | 是 |
-| 陈海英 | chy | chenhaiying | student | /home/chy | 是 |
-| 高明琦 | gmq | gaomingqi | student | /home/gmq | 是 |
-| 罗利鹏 | llp | luolipeng | student | /home/llp | 是 |
+| 华 * | hj | *** | teacher | /home/hj | 是 |
+| 王 * 燕 | why | *** | teacher | /home/why | 是 |
+| 徐 * | xy | *** | student | /home/xy | 是 |
+| 雷 * | ll | *** | student | /home/ll | 是 |
+| 潘 * 昊 | pzh | *** | student | /home/pzh | 是 |
+| 王 * | wt | *** | student | /home/wt | 是 |
+| 陶 * 威 | tjw | *** | student | /home/tjw | 是 |
+| 陈 * 英 | chy | *** | student | /home/chy | 是 |
+| 高 * 琦 | gmq | *** | student | /home/gmq | 是 |
+| 罗 * 鹏 | llp | *** | student | /home/llp | 是 |
   
 ## 连接
 ### 使用SSH连接工具
