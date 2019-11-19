@@ -93,7 +93,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 ```linux
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
 export PATH=$PATH:/usr/local/cuda-9.0/bin
-export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
+export CUDA_HOME=/usr/local/cuda-9.0
 ```
 ### 使用Clion在远程环境中运行
 Clion远程配置[官方教程](https://www.jetbrains.com/help/clion/remote-projects-support.html)  
