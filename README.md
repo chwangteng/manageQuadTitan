@@ -23,6 +23,7 @@ Nvidia Driver：384.130
 CUDA：9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
 IP：10.21.6.96  
+4TB硬盘挂载点: /mnt/4T
 
 ### 公共账户（不推荐）
 Username：root1root  
