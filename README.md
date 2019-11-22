@@ -62,9 +62,9 @@ Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Wind
 - 值得注意的是，每个目录下用缩略图方式查看文件后会生成thumb.db，如果你的代码是**无脑读取目录下所有文件**的话，要记得手动删了这个东西哦。
 ### 在Windows中显示远程窗口
 Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程显示的图片视频等。   
-####远程图形界面常用指令
+#### 远程图形界面常用指令
 打开图片：`xdg-open test.jpg`  
-####命令界面常用指令
+#### 命令界面常用指令
 查看目录内文件和文件夹大小：`du -sh ./*`  [参考](https://www.cnblogs.com/justforcon/archive/2017/12/02/7954481.html)  
 统计目录下文件数量：`ls -l | grep "^-" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
 统计目录下目录数量: `ls -l | grep "^d" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
