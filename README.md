@@ -12,7 +12,7 @@
 | 处理器 | Intel E5 2678 V3 x2 |  |
 | 主板 | ASUS Z10PE-D8 |  |
 | 内存 | Samsung DDR4 ERCC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
-| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD | 机械安装有Ubuntu，固态是swap分区 |
+| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD + WD 4TB 5400rpm HDD | 2TB机械安装有Ubuntu，固态是swap分区 |
 | 显卡 | Nvidia Titan Xp 12GB x4 |  |
 
 ## Ubuntu系统（机械硬盘）
