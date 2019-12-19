@@ -68,7 +68,7 @@ Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.ne
 查看目录内文件和文件夹大小：`du -sh ./*`  [参考](https://www.cnblogs.com/justforcon/archive/2017/12/02/7954481.html)  
 统计目录下文件数量：`ls -l | grep "^-" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
 统计目录下目录数量: `ls -l | grep "^d" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
-删除含有大量文件的文件夹: `rsync --delete-before -d empty/ target/` [参考](https://blog.csdn.net/iamlihongwei/article/details/68060593) 
+删除含有大量文件的文件夹: `rsync --delete-before -d empty/ target/` [参考](https://blog.csdn.net/iamlihongwei/article/details/68060593)   
 列出文件和目录的大小:`du -h --max-depth=1` [参考](https://blog.csdn.net/xiaoxinyu316/article/details/43269881)
 ## 运行计算
 ### 使用conda创建和管理环境
