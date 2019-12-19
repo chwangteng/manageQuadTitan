@@ -8,11 +8,11 @@
 
 | 条目 | 详情 | 备注 |
 | ------ | ------ | ------ |
-| 启动项切换 | 开机按F8 | 默认Ubuntu，选择Windows Boot Manager启动Windows系统，基本不用 |
+| 启动项切换 | 开机按F8 |  |
 | 处理器 | Intel E5 2678 V3 x2 |  |
 | 主板 | ASUS Z10PE-D8 |  |
 | 内存 | Samsung DDR4 RECC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
-| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD + WD 4TB 5400rpm HDD | 2TB机械安装有Ubuntu，固态是swap分区 |
+| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD  | 2TB机械安装有Ubuntu，固态是swap分区 |
 | 显卡 | Nvidia Titan Xp 12GB x4 |  |
 
 ## Ubuntu系统（机械硬盘）
@@ -22,8 +22,7 @@ Ubuntu：16.04.4
 Nvidia Driver：384.130  
 CUDA：9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
-IP：10.21.6.96  
-4TB硬盘挂载点: /mnt/4T
+IP：10.21.241.96  
 
 ### 公共账户（不推荐）
 Username：root1root  
@@ -37,13 +36,9 @@ Password：姓名全拼（小写）
 | 姓名 | 用户名 | 密码 | 组 | 初始路径 | sudo权限  |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | 华 * | hj | *** | teacher | /home/hj | 是 |
-| 王 * 燕 | why | *** | teacher | /home/why | 是 |
 | 徐 * | xy | *** | student | /home/xy | 是 |
-| 雷 * | ll | *** | student | /home/ll | 是 |
 | 潘 * 昊 | pzh | *** | student | /home/pzh | 是 |
 | 王 * | wt | *** | student | /home/wt | 是 |
-| 陶 * 威 | tjw | *** | student | /home/tjw | 是 |
-| 陈 * 英 | chy | *** | student | /home/chy | 是 |
 | 高 * 琦 | gmq | *** | student | /home/gmq | 是 |
 | 罗 * 鹏 | llp | *** | student | /home/llp | 是 |
   
