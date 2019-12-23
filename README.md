@@ -102,12 +102,15 @@ export CUDA_HOME=/usr/local/cuda-9.0
 ### 使用Clion在远程环境中运行
 Clion远程配置[官方教程](https://www.jetbrains.com/help/clion/remote-projects-support.html)  
  
-## 打印机配置
+## 办公室打印机配置
 - **型号**：cannon imageCLASS lbp6230dw  
 - **后台**：打印机设置为无线连接至402 professor wang, IP地址为10.21.6.97，在浏览器中访问该地址进行打印机管理，PIN密码为房间号。    
 - **IP限制**：打印机可以接受打印的IP地址限制为10.21.241.0-10.21.241.255（实验室）、10.21.6.66(单卡泰坦)、10.21.6.96（四卡泰坦）、10.21.240.96（隔壁实验室MIT无线路由器），如有需要，可以继续添加。办公室的两台电脑都可以打印。  
 - **驱动程序**：可以在自己电脑中添加网络打印机，IP如上，即可实现在本机发送打印任务。windwos添加后可以自动安装驱动（Win10设置中，添加打印机和扫描仪，一段时间后出现并选择**我需要的打印机不在列表中**，选择**使用TCP/IP地址或主机名添加打印机**，主机名或IP地址中输入10.21.6.97,使用默认设置一路下一步即可。），ubuntu、macOS需要在官网下载安装。选择适合自己系统的版本下载驱动 [驱动网址](https://www.canon.com.cn/supports/download/sims/list/slist?fileTypeId=23&categoryId=15&seriesId=67&modelId=1146&OSName=Windows%2010%20(x64)&channel=1)
-
+## 实验室打印机配置
+- **型号**：同上  
+- **后台**：IP地址为10.21.240.57  
+其余同上  
 ## 附加链接
 [Linux分区：超过2TB硬盘分区](https://www.cnblogs.com/mannyzhoug/archive/2013/08/27/3284572.html)  
 [Linux服务器新建用户和组，并分配sudo权限](https://www.cnblogs.com/devilmaycry812839668/p/10432877.html)  
