@@ -48,7 +48,7 @@ Password：姓名全拼（小写）
 | 刘 * 华 | llh | *** | student | /home/llh | 是 |
   
 ## 连接
-### 使用SSH连接工具
+### 在Windows中使用SSH连接工具
 这里我使用PuTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh 你的用户名@10.21.6.96 -pw 你的密码`，也可以通过创建密钥等其他方式进行自动登录。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/PUTTY_autologin.png)  
 ### 在Windows任务管理器中管理远程文件
@@ -74,6 +74,7 @@ Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.ne
 - 查看进程运行的目录和命令：当`nvidia-smi`下显示的PID在htop -p <PID>中仍然显示不出详细命令和路径时，使用`cd /proc/<PID>`和 `ls -l exe`查看。  
 - 创建软连接以将数据存储在空闲的磁盘仍保持目录的逻辑结构：`ln -s 原目录 映射目录`
 ## 运行计算
+提示：Debug时使用CPU，就不会占用GPU资源。  
 ### 使用conda创建和管理环境
 - 使用`conda`或 `pip`命令来创建和管理**你的环境**。使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径可通过`conda env list`命令查看。  
 - 使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn。关于conda、pip命令的更多使用方法，请参考其他教程。  
@@ -89,6 +90,13 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
 ```  
 也可以直接在终端的python命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU。  
+### 使用GPU加速
+在/home/username/.bashrc中添加如下变量。
+```linux
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
+export PATH=$PATH:/usr/local/cuda-9.0/bin
+export CUDA_HOME=/usr/local/cuda-9.0
+```
 ### 监控系统其他资源
 - 使用[iostat工具](https://blog.csdn.net/feeltouch/article/details/95042396)`watch -n 1 -d iostat -d -x -k 1 2`  `watch -n 1 -d iostat 1 2`查看磁盘和CPU状况，使用`htop`  `top`查看CPU及进程，使用 `sudo iotop` 查看I/O状态，使用`bmon -p enp7s0`查看网络流量。
 ### 不间断运行python程序
@@ -98,15 +106,10 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 
 ### 使用Pycharm在远程环境中运行
 - 如果使用Pycharm Professional进行远程开发、调试，可以参考[官方教程](https://www.jetbrains.com/help/pycharm/configuring-remote-interpreters-via-ssh.html)（配置时使用自己的ssh账号密码和自己创建的环境路径）并可以在Pycharm Professional的Remote Host中进行图形化文件管理。  
-关于怎样免费使用Pycharm Professional，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生（推荐）**   ，github学生认证更方便，通过后学生包中直接授权到Jetbrain的学生认证。   
+关于怎样免费使用Pycharm Professional，可在搜索引擎中搜索 **Jetbrain 学生** 或 **Github 学生包**   ，github学生认证更方便，通过后学生包中直接授权到Jetbrain的学生认证。   
   
-- 如果提示`libcublas.so.9.0: cannot open shared object file: No such file`的话，试一下在自己目录下的`./bashrc` 中末尾添加 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/` 然后执行 `source  ~/.bashrc` 一般可以解决。下次运行还会报错，只要执行那条source命令即可，我也不知道为啥。。。。求高人指点。在Pycharm中运行时，将 `LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/`添加到运行配置的环境变量中即可 。另外，有一位Mac用户需要在Pycharm的configuration中的环境变量中加上LD_LIBRARY_PATH，使用mac的同学注意一下。  
-使用nvcc使用下面三行命令
-```linux
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
-export PATH=$PATH:/usr/local/cuda-9.0/bin
-export CUDA_HOME=/usr/local/cuda-9.0
-```
+- 如果提示`libcublas.so.9.0: cannot open shared object file: No such file`的话，将 `LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64`添加到运行配置的pycharm环境变量中即可 。  
+
 ### 使用Clion在远程环境中运行
 Clion远程配置[官方教程](https://www.jetbrains.com/help/clion/remote-projects-support.html)  
  
