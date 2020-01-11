@@ -71,7 +71,7 @@ Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.ne
 - 删除含有大量文件的文件夹: `rsync --delete-before -d empty/ target/` [参考](https://blog.csdn.net/iamlihongwei/article/details/68060593) 
 - 列出文件和目录的大小:`du -h --max-depth=1` [参考](https://blog.csdn.net/xiaoxinyu316/article/details/43269881)  
 - 手动清理显存:当自己的程序已经中止，且`nvidia-smi`中已经看不到PID，但显存仍占用时，使用`sudo fuser -v /dev/nvidia*`查找自己程序占用GPU资源的PID，然后执行kill。  
-- 查看进程运行的目录和命令：当`nvidia-smi`下显示的PID在htop -p <PID>中仍然显示不出详细命令和路径时，使用`cd /proc/<PID>`和 `ls -l exe`查看。  
+- 查看进程运行的目录和命令：当`nvidia-smi`下显示的PID在`htop -p <PID>`中仍然显示不出详细命令和路径时，使用`cd /proc/<PID>`和 `ls -l exe`查看。  
 - 创建软连接以将数据存储在空闲的磁盘仍保持目录的逻辑结构：`ln -s 原目录 映射目录`
 ## 运行计算
 提示：Debug时使用CPU，就不会占用GPU资源。  
