@@ -91,7 +91,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = 'x'
 ```  
 也可以直接在终端的python命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU。  
 ### 使用GPU加速
-在/home/username/.bashrc中添加如下变量。
+在/home/<username>/.bashrc中添加如下变量。
 ```linux
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
 export PATH=$PATH:/usr/local/cuda-9.0/bin
