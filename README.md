@@ -24,7 +24,7 @@ CUDA：9.0
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
 IP：10.21.241.96  
 
-### 公共账户（不推荐）
+### 公共账户
 Username：root1root  
 Password：112233
 
@@ -35,12 +35,14 @@ Password：姓名全拼（小写）
 
 | 姓名 | 用户名 | 密码 | 组 | 初始路径 | sudo权限  |
 | ------ | ------ | ------ | ------ | ------ | ------ |
-| 华 * | hj | *** | teacher | /home/hj | 是 |
-| 徐 * | xy | *** | student | /home/xy | 是 |
+| *    璟 | hj | *** | teacher | /home/hj | 是 |
 | 潘 * 昊 | pzh | *** | student | /home/pzh | 是 |
-| 王 * | wt | *** | student | /home/wt | 是 |
+| *    腾 | wt | *** | student | /home/wt | 是 |
 | 高 * 琦 | gmq | *** | student | /home/gmq | 是 |
 | 罗 * 鹏 | llp | *** | student | /home/llp | 是 |
+| 朱 * 丽 | zsl | *** | student | /home/zsl | 是 |
+| 吴 * 鑫 | wsx | *** | student | /home/wsx | 是 |
+| 刘 * 华 | llh | *** | student | /home/llh | 是 |
   
 ## 连接
 ### 使用SSH连接工具
@@ -60,11 +62,14 @@ Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.ne
 #### 远程图形界面常用指令
 打开图片：`xdg-open test.jpg`  
 #### 命令界面常用指令
-查看目录内文件和文件夹大小：`du -sh ./*`  [参考](https://www.cnblogs.com/justforcon/archive/2017/12/02/7954481.html)  
-统计目录下文件数量：`ls -l | grep "^-" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
-统计目录下目录数量: `ls -l | grep "^d" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
-删除含有大量文件的文件夹: `rsync --delete-before -d empty/ target/` [参考](https://blog.csdn.net/iamlihongwei/article/details/68060593)   
-列出文件和目录的大小:`du -h --max-depth=1` [参考](https://blog.csdn.net/xiaoxinyu316/article/details/43269881)
+- 查看目录内文件和文件夹大小：`du -sh ./*`  [参考](https://www.cnblogs.com/justforcon/archive/2017/12/02/7954481.html)  
+- 统计目录下文件数量：`ls -l | grep "^-" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
+- 统计目录下目录数量: `ls -l | grep "^d" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
+- 删除含有大量文件的文件夹: `rsync --delete-before -d empty/ target/` [参考](https://blog.csdn.net/iamlihongwei/article/details/68060593)   
+- 列出文件和目录的大小:`du -h --max-depth=1` [参考](https://blog.csdn.net/xiaoxinyu316/article/details/43269881)  
+- 手动清理显存:`sudo fuser -v /dev/nvidia*`在自己的程序已经退出，`nvidia-smi`看不到PID的情况但显存仍占用，查找占用GPU资源的PID，然后执行kill。  
+- 查看进程运行的目录和命令：当`nvidia-smi`下显示的PID在htop -p <PID>中仍然显示不出详细命令和路径时，使用`cd /proc/<PID>`和 `ls -l exe`查看。  
+- 创建软连接以将数据存储在空闲的磁盘仍保持目录的逻辑结构：`ln -s 原目录 映射目录`
 ## 运行计算
 ### 使用conda创建和管理环境
 - 使用`conda`或 `pip`命令来创建和管理**你的环境**。使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径可通过`conda env list`命令查看。  
