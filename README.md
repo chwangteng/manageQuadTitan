@@ -12,7 +12,7 @@
 | 处理器 | Intel E5 2678 V3 x2 |  |
 | 主板 | ASUS Z10PE-D8 |  |
 | 内存 | Samsung DDR4 RECC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
-| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD  | 2TB机械安装有Ubuntu，固态是swap分区 |
+| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD  |  |
 | 显卡 | Nvidia Titan Xp 12GB x4 |  |
 
 ## Ubuntu系统（机械硬盘）
@@ -23,6 +23,9 @@ Nvidia Driver：384.130
 CUDA：9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
 IP：10.21.241.96  
+磁盘挂载：  
+- 2TB机械为根目录 /
+- 256GB固态中，32GB分区挂载为swap，剩余部分挂载在/mnt/256
 
 ### 公共账户
 Username：root1root  
@@ -60,12 +63,12 @@ Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Wind
 ### 在Windows中显示远程窗口
 Windows下PuTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程显示的图片视频等。   
 #### 远程图形界面常用指令
-打开图片：`xdg-open test.jpg`  
+不指定程序名打开文件：`xdg-open test.jpg`  
 #### 命令界面常用指令
 - 查看目录内文件和文件夹大小：`du -sh ./*`  [参考](https://www.cnblogs.com/justforcon/archive/2017/12/02/7954481.html)  
 - 统计目录下文件数量：`ls -l | grep "^-" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
 - 统计目录下目录数量: `ls -l | grep "^d" | wc -l`  [参考](https://www.cnblogs.com/yongjieShi/p/8075281.html)  
-- 删除含有大量文件的文件夹: `rsync --delete-before -d empty/ target/` [参考](https://blog.csdn.net/iamlihongwei/article/details/68060593)   
+- 删除含有大量文件的文件夹: `rsync --delete-before -d empty/ target/` [参考](https://blog.csdn.net/iamlihongwei/article/details/68060593) 
 - 列出文件和目录的大小:`du -h --max-depth=1` [参考](https://blog.csdn.net/xiaoxinyu316/article/details/43269881)  
 - 手动清理显存:`sudo fuser -v /dev/nvidia*`在自己的程序已经退出，`nvidia-smi`看不到PID的情况但显存仍占用，查找占用GPU资源的PID，然后执行kill。  
 - 查看进程运行的目录和命令：当`nvidia-smi`下显示的PID在htop -p <PID>中仍然显示不出详细命令和路径时，使用`cd /proc/<PID>`和 `ls -l exe`查看。  
@@ -107,16 +110,15 @@ export CUDA_HOME=/usr/local/cuda-9.0
 ### 使用Clion在远程环境中运行
 Clion远程配置[官方教程](https://www.jetbrains.com/help/clion/remote-projects-support.html)  
  
-## 办公室打印机配置
+## 办公室打印机配置(没有钥匙)
 - **型号**：cannon imageCLASS lbp6230dw  
-- **后台**：打印机设置为无线连接至402 professor wang, IP地址为10.21.6.97，在浏览器中访问该地址进行打印机管理，PIN密码为房间号。    
+- **后台**：打印机设置为有线连接, IP地址为10.21.6.97，在浏览器中访问该地址进行打印机管理，PIN密码为办公室房间号。    
 - **IP限制**：打印机可以接受打印的IP地址限制为10.21.241.0-10.21.241.255（实验室）、10.21.6.66(单卡泰坦)、10.21.6.96（四卡泰坦）、10.21.240.96（隔壁实验室MIT无线路由器），如有需要，可以继续添加。办公室的两台电脑都可以打印。  
 - **驱动程序**：可以在自己电脑中添加网络打印机，IP如上，即可实现在本机发送打印任务。windwos添加后可以自动安装驱动（Win10设置中，添加打印机和扫描仪，一段时间后出现并选择**我需要的打印机不在列表中**，选择**使用TCP/IP地址或主机名添加打印机**，主机名或IP地址中输入10.21.6.97,使用默认设置一路下一步即可。），ubuntu、macOS需要在官网下载安装。选择适合自己系统的版本下载驱动 [驱动网址](https://www.canon.com.cn/supports/download/sims/list/slist?fileTypeId=23&categoryId=15&seriesId=67&modelId=1146&OSName=Windows%2010%20(x64)&channel=1)
-## 实验室打印机配置
+## 实验室打印机配置(耗材用完了)
 - **型号**：同上  
 - **后台**：网线连接，IP地址为10.21.240.57  
 - **IP限制**：打印机可以接受打印的IP地址限制为10.21.241.0-10.21.241.255（417实验室）、10.21.240.0-10.21.240.255（423实验室），如有需要，可以继续添加。办公室的两台电脑都可以打印。 
 - **驱动程序**：同上
 ## 附加链接
 [Linux分区：超过2TB硬盘分区](https://www.cnblogs.com/mannyzhoug/archive/2013/08/27/3284572.html)  
-[Linux服务器新建用户和组，并分配sudo权限](https://www.cnblogs.com/devilmaycry812839668/p/10432877.html)  
