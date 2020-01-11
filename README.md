@@ -49,7 +49,7 @@ Password：姓名全拼（小写）
   
 ## 连接
 ### 在Windows中使用SSH连接工具
-这里我使用PuTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh 你的用户名@10.21.6.96 -pw 你的密码`，也可以通过创建密钥等其他方式进行自动登录。  
+这里我使用PuTTY，它的自动登录设置可参考下图，快捷方式目标设定为形如`"C:\Program Files\PuTTY\putty.exe" -ssh 你的用户名@10.21.241.96 -pw 你的密码`，也可以通过创建密钥等其他方式进行自动登录。  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/PUTTY_autologin.png)  
 ### 在Windows任务管理器中管理远程文件
 Windows轻松使用：由于服务器没有安装FTP服务，所以无法在Windows资源管理器中直接添加网络位置，需借助第三方软件。  
