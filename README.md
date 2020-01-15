@@ -12,7 +12,7 @@
 | 处理器 | Intel E5 2678 V3 x2 |  |
 | 主板 | ASUS Z10PE-D8 |  |
 | 内存 | Samsung DDR4 RECC 2400Mhz 16GBx2 | 双通道，由于CPU内存控制器限制实际运行在2133Mhz |
-| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD  |  |
+| 硬盘 | Samsung 860 EVO 250GB SATA SSD + WD 2TB 5400rpm HDD +WD 1TB 5400rpm HDD |  |
 | 显卡 | Nvidia Titan Xp 12GB x4 |  |
 
 ## Ubuntu系统（机械硬盘）
@@ -23,9 +23,10 @@ Nvidia Driver：384.130
 CUDA：9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
 IP：10.21.241.96  
-磁盘挂载：  
-- 2TB机械为根目录 /
-- 256GB固态中，32GB分区挂载为swap，剩余部分挂载在/mnt/256
+磁盘挂载(详见`df`)：  
+- 2TB机械:根目录 /
+- 1TB机械: /mnt/1T
+- 256GB固态:32GB分区挂载为swap，剩余部分挂载在/mnt/256
 
 ### 公共账户
 Username：root1root  
