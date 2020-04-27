@@ -90,13 +90,14 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = 'x' 
 ```  
 也可以直接在终端的python命令前加上`CUDA_VISIBLE_DEVICES=0`来指定GPU。  
-### 使用GPU加速
-在/home/username/.bashrc中添加如下变量。
+### 使用GPU加速(CUDA9.0)
+在/home/username/.bashrc或者运行时添加如下变量。
 ```linux
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
 export PATH=$PATH:/usr/local/cuda-9.0/bin
 export CUDA_HOME=/usr/local/cuda-9.0
 ```
+若要使用CUDA 8.0，安装CUDA8.0后将上述变量设置为8.0对应的路径。
 ### 监控系统其他资源
 - 使用[iostat工具](https://blog.csdn.net/feeltouch/article/details/95042396)`watch -n 1 -d iostat -d -x -k 1 2`  `watch -n 1 -d iostat 1 2`查看磁盘和CPU状况，使用`htop`  `top`查看CPU及进程，使用 `sudo iotop` 查看I/O状态，使用`bmon -p enp7s0`查看网络流量。
 ### 不间断运行python程序
